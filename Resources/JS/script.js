@@ -5,7 +5,7 @@ let links = document.querySelectorAll('.links');
 // Display links onClick on Hamburger
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('hide');
-    hamburger.classList.toggle('rotate');
+    hamburger.classList.toggle('lines-rotate');
 });
 
 // Hide navLink Container onClick any single link
