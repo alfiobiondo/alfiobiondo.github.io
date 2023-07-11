@@ -27,6 +27,10 @@ nav {
   color: rgb(255, 255, 255);
 }
 
+#logo {
+  padding: 1rem 0;
+}
+
 /* HAMBURGER */
 .hamburger {
   position: absolute;
@@ -35,8 +39,8 @@ nav {
   z-index: -1;
   background-color: rgba(65, 65, 65, 0.508);
   height: 2.1875rem;
-  width: 2.5rem;
-  border-radius: 0 0.625rem 0.625rem 0;
+  width: 2.3rem;
+  border-radius: 0 0.5rem 0.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,6 +58,11 @@ nav {
   padding-right: 0.625rem;
 }
 
+.toggle-function {
+  transform: translate(-13.75rem, 0);
+  transition: 0.5s;
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -63,21 +72,33 @@ nav ul {
 }
 
 li {
-  width: 4.375rem;
+  width: auto;
 }
 
 li a {
   font-size: 1.1rem;
   cursor: pointer;
   padding: 1.25rem 0.9375rem;
-  transition: 0.5s;
+  transition: ease-in-out 0.5s;
   color: rgb(255, 255, 255);
 }
 
 li a:hover {
   color: #f1c40f;
   border-bottom: 0.25rem #f1c40f solid;
-  transition: 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+}
+
+.social-media-icons a {
+  color: rgb(255, 255, 255);
 }
 
 .hide {
@@ -85,6 +106,10 @@ li a:hover {
 }
 
 @media screen and (max-width: 700px) {
+  #logo {
+    padding: 0rem;
+  }
+
   /* HAMBURGER */
   .hamburger {
     position: relative;
@@ -104,7 +129,7 @@ li a:hover {
     display: block;
     background-color: rgb(255, 255, 255);
     height: 0.125rem;
-    width: 2.1875rem;
+    width: 80%;
     padding-right: 0.625rem;
   }
 
@@ -114,7 +139,7 @@ li a:hover {
   }
 
   nav {
-    height: auto;
+    height: 4.5rem;
     width: 100vw;
     background-color: rgba(88, 88, 88, 0.508);
     display: flex;
@@ -135,7 +160,7 @@ li a:hover {
     top: -18.75rem;
     right: 0;
     background-color: rgb(241, 196, 15);
-    padding: 2,1875rem 0;
+    padding: 1.125rem 0;
     border-radius: 0 0 1.25rem 1.25rem;
   }
 
