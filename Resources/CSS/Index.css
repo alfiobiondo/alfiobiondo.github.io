@@ -14,19 +14,6 @@ body {
   height: 100vh;
 }
 
-nav {
-  width: 13.75rem;
-  height: 100vh;
-  background-color: rgba(88, 88, 88, 0.508);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: 0.5s;
-  z-index: 10;
-  position: absolute;
-  color: rgb(255, 255, 255);
-}
-
 #logo {
   padding: 1rem 0;
 }
@@ -63,6 +50,20 @@ nav {
   transition: 0.5s;
 }
 
+/* MENU */
+nav {
+  width: 13.75rem;
+  height: 100vh;
+  background-color: rgba(88, 88, 88, 0.508);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.5s;
+  z-index: 10;
+  position: absolute;
+  color: rgb(255, 255, 255);
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -85,10 +86,14 @@ li a {
 
 li a:hover {
   color: #f1c40f;
+  padding-bottom: 0.5rem;
   border-bottom: 0.25rem #f1c40f solid;
-  transition: ease-in-out 0.5s;
+  transition: 0.5s;
+  letter-spacing: 0.13rem;
+  font-weight: bold;
 }
 
+/* SOCIAL MEDIA */
 .social-media-icons {
   display: flex;
   justify-content: center;
@@ -105,6 +110,7 @@ li a:hover {
   top: 4.375rem;
 }
 
+/* MEDIA BREAKPOINT */
 @media screen and (max-width: 700px) {
   #logo {
     padding: 0rem;
@@ -138,6 +144,7 @@ li a:hover {
     border-radius: 0.3125rem;
   }
 
+  /* MENU */
   nav {
     height: 4.5rem;
     width: 100vw;
@@ -177,6 +184,6 @@ li a:hover {
     font-weight: bold;
     color: rgb(25, 30, 36);
     border: none;
-    letter-spacing: 0.18rem;
+    letter-spacing: 0.13rem;
   }
 }
