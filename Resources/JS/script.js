@@ -1,7 +1,7 @@
 let hamburger = document.querySelector(".hamburger");
 let menu = document.querySelector(".nav-container");
 
-var viewport = window.matchMedia("(max-width: 700px)")
+var viewport = window.matchMedia("(min-width: 481px) and (max-width: 767px)")
 
 // Display links onClick on Hamburger
 hamburger.addEventListener("click", () => {
