@@ -34,7 +34,6 @@ body {
 #logo:hover {
   animation: 0.5s ease-in-out forwards logoHoverColor;
   transform: scale(130%);
-  stroke-width: 400%;
 }
 
 /* HAMBURGER */
@@ -70,7 +69,7 @@ body {
 }
 
 .toggle-function-sb {
-  transform: translate(-13.75rem, 0);
+  transform: translate(13.75rem, 0);
   transition: ease-out 0.5s;
 }
 
@@ -86,6 +85,7 @@ nav {
   transition: 0.5s;
   z-index: 10;
   position: absolute;
+  left: -13.75rem;
   color: rgb(255, 255, 255);
 }
 
@@ -177,7 +177,7 @@ li a:hover {
   }
 
   .toggle-function-dd {
-    transform: translate(0, -25.6875rem);
+    transform: translate(0, 25.6875rem);
     transition: 0.5s;
   }
 
@@ -193,6 +193,8 @@ li a:hover {
     gap: 1.25rem;
     color: rgb(255, 255, 255);
     padding: 0.9375rem 1.25rem;
+    left: 0;
+    top: -25.6875rem;
   }
 
   nav ul {
