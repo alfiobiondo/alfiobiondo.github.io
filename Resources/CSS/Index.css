@@ -15,7 +15,26 @@ body {
 }
 
 #logo {
-  padding: 1rem 0;
+  width: 3rem;
+  padding-top: 3rem;
+  transition: 0.5s;
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(247deg) brightness(104%) contrast(101%);
+}
+
+@keyframes logoHoverColor {
+  from {
+    filter: invert(83%) sepia(40%) saturate(3422%) hue-rotate(1deg) brightness(105%) contrast(89%);
+  }
+
+  to {
+    filter: invert(83%) sepia(40%) saturate(3422%) hue-rotate(1deg) brightness(105%) contrast(89%);
+  }
+}
+
+#logo:hover {
+  animation: 0.5s ease-in-out forwards logoHoverColor;
+  transform: scale(130%);
+  stroke-width: 400%;
 }
 
 /* HAMBURGER */
@@ -35,6 +54,11 @@ body {
   gap: 0.3125rem;
   cursor: pointer;
   padding: 0.3125rem;
+  transition: 0.5s;
+}
+
+.hamburger:hover {
+  transform: scale(120%) translateX(0.2rem);
 }
 
 .lines {
@@ -45,9 +69,9 @@ body {
   padding-right: 0.625rem;
 }
 
-.toggle-function {
+.toggle-function-sb {
   transform: translate(-13.75rem, 0);
-  transition: 0.5s;
+  transition: ease-out 0.5s;
 }
 
 /* MENU */
@@ -58,6 +82,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   transition: 0.5s;
   z-index: 10;
   position: absolute;
@@ -89,8 +114,8 @@ li a:hover {
   padding-bottom: 0.5rem;
   border-bottom: 0.25rem #f1c40f solid;
   transition: 0.5s;
-  letter-spacing: 0.13rem;
-  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
 }
 
 /* SOCIAL MEDIA */
@@ -104,86 +129,83 @@ li a:hover {
 
 .social-media-icons a {
   color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  transition: 0.5s;
 }
 
-.hide {
-  top: 4.375rem;
+.social-media-icons a:hover {
+  color: #f1c40f;
+  transform: scale(135%);
 }
 
 /* MEDIA BREAKPOINT */
 @media screen and (max-width: 700px) {
   #logo {
-    padding: 0rem;
+    width: 2rem;
+    padding: 1.25rem 0rem;
   }
 
   /* HAMBURGER */
   .hamburger {
-    position: relative;
-    top: auto;
-    right: auto;
+    position: absolute;
+    top: 25.6875rem;
+    left: 80%;
+    z-index: -1;
+    background-color: rgba(65, 65, 65, 0.508);
+    height: 2.1875rem;
+    width: 2.3rem;
+    border-radius: 0 0 0.5rem 0.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 0.3125rem;
     cursor: pointer;
     padding: 0.3125rem;
-    margin-right: 0.3125rem;
-    background-color: transparent;
-    border-radius: 0;
+  }
+
+  .hamburger:hover {
+    transform: scale(120%) translateY(0.2rem);
   }
 
   .lines {
     display: block;
     background-color: rgb(255, 255, 255);
     height: 0.125rem;
-    width: 80%;
+    width: 60%;
     padding-right: 0.625rem;
   }
 
-  .lines-rotate {
-    background-color: rgb(85, 85, 85);
-    border-radius: 0.3125rem;
+  .toggle-function-dd {
+    transform: translate(0, -25.6875rem);
+    transition: 0.5s;
   }
 
   /* MENU */
   nav {
-    height: 4.5rem;
+    height: 25.6875rem;
     width: 100vw;
     background-color: rgba(88, 88, 88, 0.508);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 3.125rem;
+    gap: 1.25rem;
     color: rgb(255, 255, 255);
     padding: 0.9375rem 1.25rem;
   }
 
-  ul {
-    width: 100%;
+  nav ul {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: -18.75rem;
-    right: 0;
-    background-color: rgb(241, 196, 15);
     padding: 1.125rem 0;
     border-radius: 0 0 1.25rem 1.25rem;
-  }
-
-  li a {
-    color: rgba(12, 11, 11, 0.836);
   }
 
   li {
     text-align: center;
     width: 90vw;
-  }
-
-  li a:hover {
-    font-weight: bold;
-    color: rgb(25, 30, 36);
-    border: none;
-    letter-spacing: 0.13rem;
   }
 }
