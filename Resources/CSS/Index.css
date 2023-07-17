@@ -68,6 +68,15 @@ body {
   padding-right: 0.625rem;
 }
 
+.cross {
+  display: none;
+  content: "\274C";
+  background-color: rgb(255, 255, 255);
+  height: 0.125rem;
+  width: 60%;
+  padding-right: 0.625rem;
+}
+
 .toggle-function-sb {
   transform: translate(13.75rem, 0);
   transition: ease-out 0.5s;
@@ -202,7 +211,7 @@ li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.125rem 0;
+    padding: 1.25rem 0;
     border-radius: 0 0 1.25rem 1.25rem;
   }
 
