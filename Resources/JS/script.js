@@ -1,6 +1,5 @@
 let hamburger = document.querySelector(".hamburger");
-let lines = hamburger.querySelector(".lines")
-let cross = hamburger.querySelector(".lines")
+let icon = hamburger.querySelector(".fa-bar")
 let menu = document.querySelector(".nav-container");
 let logo = document.querySelector(".logo");
 let navLinks = document.querySelector(".nav-links");
@@ -10,17 +9,21 @@ const menuElements = [menu, logo, navLinks, socialMedia];
 var viewport = window.matchMedia("(max-width: 650px)")
 
 // Display menu onClick on Hamburger
+icon.addEventListener("click", () => {
+    if (icon.classList.contains("fa-bars")) {
+        icon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+        icon.classList.replace("fa-times", "fa-xmark");
+    }
+});
+
+// Display menu onClick on Hamburger
 hamburger.addEventListener("click", () => {
     if (viewport.matches) {
-        menu.classList.toggle("toggle-function-dd");
-        lines.style.display = "none";
-        cross.style.display = "block";
-        
+        menu.classList.toggle("toggle-function-dd");      
     } else {
         menu.classList.toggle("toggle-function-sb");
-        lines.style.display = "none";
-        cross.style.display = "block";
-    }
+    };
 });
 
 //close menu onClick on Social media

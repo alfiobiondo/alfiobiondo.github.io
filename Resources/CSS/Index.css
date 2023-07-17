@@ -60,23 +60,6 @@ body {
   transform: scale(120%) translateX(0.2rem);
 }
 
-.lines {
-  display: block;
-  background-color: rgb(255, 255, 255);
-  height: 0.125rem;
-  width: 60%;
-  padding-right: 0.625rem;
-}
-
-.cross {
-  display: none;
-  content: "\274C";
-  background-color: rgb(255, 255, 255);
-  height: 0.125rem;
-  width: 60%;
-  padding-right: 0.625rem;
-}
-
 .toggle-function-sb {
   transform: translate(13.75rem, 0);
   transition: ease-out 0.5s;
