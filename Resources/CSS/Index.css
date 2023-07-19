@@ -235,20 +235,29 @@ header {
     width: 90vw;
   }
 
+  .jumbotron {
+    background-color: rgb(40, 40, 40);
+    background-image: url(../Images/Profile_picture_circle.png), linear-gradient(to top, rgb(40, 40, 40), rgb(40, 40, 40));
+    background-position: center;
+    background-position-y: max(10vh);
+    background-repeat: no-repeat;
+    background-size: contain;   
+  }
+
   .greetings {
     padding-right: 2rem;
   }
 }
 
 /* TABLETS */
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 700px) and (max-width: 800px) {
   .jumbotron {
     padding: 2rem;
     background-color: rgb(40, 40, 40);
     background-image: url(../Images/Profile_picture_circle.png), linear-gradient(to top, rgb(40, 40, 40), rgb(40, 40, 40));
     background-position: center;
-    background-position-y: 10vh;
+    background-position-y: max(10vh);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;   
   }
 }
