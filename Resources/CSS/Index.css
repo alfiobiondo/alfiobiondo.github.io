@@ -142,11 +142,11 @@ header {
 
 .jumbotron {
   padding: 2rem;
-  background: rgb(40, 40, 40) url(../Images/Profile_picture.jpeg);
+  background-image: url(../Images/Profile_picture.jpeg), linear-gradient(to top, rgb(40, 40, 40), rgb(40, 40, 40));
   background-blend-mode: lighten;
   background-position: right;
   background-repeat: no-repeat;
-  background-size: auto 95vh;
+  background-size: auto 100vh;
 }
 
 .greetings {
@@ -186,6 +186,10 @@ header {
 
 /* PHONES */
 @media screen and (max-width: 650px) {
+  html {
+    font-size: 12px;
+  }
+
   #logo {
     width: 2rem;
     padding: 1.25rem 0rem;
@@ -230,16 +234,21 @@ header {
     text-align: center;
     width: 90vw;
   }
+
+  .greetings {
+    padding-right: 2rem;
+  }
 }
 
 /* TABLETS */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .jumbotron {
     padding: 2rem;
-    background: rgb(40, 40, 40) url(../Images/Profile_picture.jpeg);
+    background-color: rgb(40, 40, 40);
+    background-image: url(../Images/Profile_picture_circle.png), linear-gradient(to top, rgb(40, 40, 40), rgb(40, 40, 40));
     background-position: center;
+    background-position-y: 10vh;
     background-repeat: no-repeat;
-    background-size: 50vh;
-    backkground
+    background-size: contain;
   }
 }
