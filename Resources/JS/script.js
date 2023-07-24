@@ -3,10 +3,14 @@ let menu = document.querySelector(".nav-container");
 let icon = document.querySelector(".fa-bars");
 let logo = document.querySelector(".logo");
 let navLinks = document.querySelector(".nav-links");
-let socialMedia = document.querySelector(".social-media-icons")
-const menuElements = [menu, logo, navLinks, socialMedia];
+let socialMedia = document.querySelector(".social-media-icons");
+let header = document.querySelector(".jumbotron-container");
+let jumbotron = document.querySelector(".jumbotron");
+let greetings = document.querySelector(".greetings");
+//const menuElements = [menu, logo, navLinks, socialMedia];
 
 var viewport = window.matchMedia("(max-width: 650px)")
+var viewportFull = window.matchMedia("(min-width: 801px)")
 
 // Display menu onClick on Hamburger
 hamburger.addEventListener("click", () => {
@@ -58,3 +62,32 @@ document.addEventListener('click', function handleClickOutsideMenu(event) {
         }
     }
 });
+
+//slider Header
+let cloneHeaderalreadyExists = false;
+
+
+
+const handleMove = e => {   
+    if (viewportFull.matches) {const cloneHeader = () => {
+        if (cloneHeaderalreadyExists == true) {
+            return;
+        } else {
+            let headerClone = header.cloneNode(true);
+            headerClone.classList.replace("jumbotron-container", "header-clone");
+            header.after(headerClone);
+            cloneHeaderalreadyExists = true;
+        }
+    } 
+    cloneHeader();
+    header.style.width = `${e.clientX / window.innerWidth * 100}%`;
+    } else {
+        return;
+    } 
+}
+
+
+document.onmousemove = e => handleMove(e);
+document.ontouchmove = e => handleMove(e);
+// document.onmousemove = e => cloneHeader(e);
+// document.ontouchmove = e => cloneHeader(e);

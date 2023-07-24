@@ -101,9 +101,9 @@ li a {
 }
 
 li a:hover {
-  color: #f1c40f;
+  color: rgb(241, 196, 15);
   padding-bottom: 0.5rem;
-  border-bottom: 0.25rem #f1c40f solid;
+  border-bottom: 0.25rem rgb(241, 196, 15) solid;
   transition: 0.5s;
   letter-spacing: 0.1rem;
   font-weight: 600;
@@ -125,7 +125,7 @@ li a:hover {
 }
 
 .social-media-icons a:hover {
-  color: #f1c40f;
+  color: rgb(241, 196, 15);
   transform: scale(135%);
 }
 
@@ -133,28 +133,63 @@ li a:hover {
 header {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
+  display: grid;
   justify-content: space-between;
   align-items: end;
-  transition: 0.5s;
+  /* transition: 0.5s; */
+  overflow: hidden;
+  z-index: 2;
+}
+
+.header-clone {
+  position: absolute;
+  z-index: 1;
+  top: 0rem;
 }
 
 .jumbotron {
   padding: 2rem;
+  width: 100vw;
+  height: 100vh;
   background-image: url(../Images/Profile_picture.jpeg), linear-gradient(to top, rgb(40, 40, 40), rgb(40, 40, 40));
   background-blend-mode: lighten;
   background-position: right;
   background-repeat: no-repeat;
   background-size: auto 100vh;
+  z-index: 3;
+}
+
+.header-clone .jumbotron {
+  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(40, 40, 40);
+  background-image: url(../Images/Profile_picture.jpeg), linear-gradient(to top, rgba(241, 196, 15, 0.100), rgba(241, 196, 15, 0.100));
+  background-blend-mode: lighten;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto 100vh;
+  z-index: 3;
 }
 
 .greetings {
+  position: absolute;
   padding-left: 2rem;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   color: rgb(255, 255, 255);
+  z-index: 4;
+}
+
+.header-clone .greetings {
+  position: absolute;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  z-index: 4;
 }
 
 .greetings span:first-child {
@@ -183,6 +218,9 @@ header {
 
 
 /* MEDIA BREAKPOINT */
+
+/* PHONES */
+@media screen and (min-width: 801px) {}
 
 /* PHONES */
 @media screen and (max-width: 650px) {
@@ -244,6 +282,11 @@ header {
     background-size: contain;   
   }
 
+
+  .header-clone .jumbotron {
+    display: none; 
+  }
+
   .greetings {
     padding-right: 2rem;
   }
@@ -259,5 +302,9 @@ header {
     background-position-y: max(10vh);
     background-repeat: no-repeat;
     background-size: contain;   
+  }
+
+  .header-clone .jumbotron {
+    display: none; 
   }
 }
