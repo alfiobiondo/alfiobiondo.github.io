@@ -221,18 +221,6 @@ header {
 /* COMPUTER */
 @media screen and (min-width: 801px) {}
 
-/* PHONES LANDSCAPE */
-@media screen and (min-width: 650px) and (max-width: 850px) {
-  html {
-    font-size: 12px;
-  }
-  
-  .greetings {
-    bottom: 15rem;
-    padding-right: 2rem;
-  }
-}
-
 /* PHONES */
 @media screen and (max-width: 650px) {
   html {
@@ -284,6 +272,8 @@ header {
     width: 90vw;
   }
 
+/* HEADER */
+
   .jumbotron {
     background-color: rgb(40, 40, 40);
     background-image: url(../Images/Profile_picture_circle.png), linear-gradient(to top, rgb(40, 40, 40), rgb(40, 40, 40));
@@ -291,11 +281,6 @@ header {
     background-position-y: max(10vh);
     background-repeat: no-repeat;
     background-size: contain;   
-  }
-
-
-  .header-clone .jumbotron {
-    display: none; 
   }
 
   .greetings {
@@ -306,6 +291,8 @@ header {
 
 /* TABLETS */
 @media screen and (min-width: 700px) and (max-width: 800px) {
+  
+  /* HEADER */
   .jumbotron {
     padding: 2rem;
     background-color: rgb(40, 40, 40);
@@ -314,10 +301,6 @@ header {
     background-position-y: max(10vh);
     background-repeat: no-repeat;
     background-size: contain;   
-  }
-
-  .header-clone .jumbotron {
-    display: none; 
   }
 
   .greetings {
