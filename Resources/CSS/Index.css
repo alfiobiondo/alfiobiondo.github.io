@@ -260,7 +260,23 @@ header {
 /* MEDIA BREAKPOINT */
 
 /* COMPUTER */
-@media screen and (min-width: 801px) {}
+@media screen and (min-width: 851px) {}
+
+/* PHONES */
+@media screen and (max-width: 670px) {
+  /* HEADER */
+  .greetings {
+    bottom: 17rem;
+    padding-right: 2rem;
+  }
+}
+
+/* PHONES */
+@media screen and (max-width: 850px) {
+  html {
+    font-size: 12px;
+  }
+}
 
 /* PHONES */
 @media screen and (max-width: 650px) {
@@ -332,7 +348,7 @@ header {
 
 /* TABLETS */
 @media screen and (min-width: 700px) and (max-width: 800px) {
-  
+
   /* HEADER */
   .jumbotron {
     padding: 2rem;
