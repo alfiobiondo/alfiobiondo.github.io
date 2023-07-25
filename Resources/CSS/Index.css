@@ -136,7 +136,6 @@ header {
   display: grid;
   justify-content: space-between;
   align-items: end;
-  /* transition: 0.5s; */
   overflow: hidden;
   z-index: 2;
 }
@@ -288,6 +287,7 @@ header {
   }
 
   .greetings {
+    bottom: 1vh;
     padding-right: 2rem;
   }
 }
@@ -306,5 +306,10 @@ header {
 
   .header-clone .jumbotron {
     display: none; 
+  }
+
+  .greetings {
+    bottom: 1vh;
+    padding-right: 2rem;
   }
 }
