@@ -172,7 +172,8 @@ header {
 }
 
 .greetings {
-  position: absolute;
+  position: relative;
+  bottom: 13rem;
   padding-left: 2rem;
   padding-bottom: 2rem;
   display: flex;
@@ -182,7 +183,6 @@ header {
 }
 
 .header-clone .greetings {
-  position: absolute;
   padding-left: 2rem;
   padding-bottom: 2rem;
   display: flex;
@@ -218,8 +218,20 @@ header {
 
 /* MEDIA BREAKPOINT */
 
-/* PHONES */
+/* COMPUTER */
 @media screen and (min-width: 801px) {}
+
+/* PHONES LANDSCAPE */
+@media screen and (min-width: 650px) and (max-width: 850px) {
+  html {
+    font-size: 12px;
+  }
+  
+  .greetings {
+    bottom: 15rem;
+    padding-right: 2rem;
+  }
+}
 
 /* PHONES */
 @media screen and (max-width: 650px) {
@@ -287,7 +299,7 @@ header {
   }
 
   .greetings {
-    bottom: 1vh;
+    bottom: 22rem;
     padding-right: 2rem;
   }
 }
@@ -309,7 +321,7 @@ header {
   }
 
   .greetings {
-    bottom: 1vh;
+    bottom: 17rem;
     padding-right: 2rem;
   }
 }
