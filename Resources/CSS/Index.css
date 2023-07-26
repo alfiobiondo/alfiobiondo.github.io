@@ -159,30 +159,13 @@ header {
 }
 
 .header-clone .jumbotron {
-  padding: 2rem;
-  width: 100vw;
-  height: 100vh;
   background-color: rgb(40, 40, 40);
   background-image: url(../Images/Profile_picture.jpeg), linear-gradient(to top, rgba(241, 196, 15, 0.100), rgba(241, 196, 15, 0.100));
-  background-blend-mode: lighten;
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: auto 100vh;
-  z-index: 3;
 }
 
 .greetings {
   position: relative;
   bottom: 13rem;
-  padding-left: 2rem;
-  padding-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  color: rgb(255, 255, 255);
-  z-index: 4;
-}
-
-.header-clone .greetings {
   padding-left: 2rem;
   padding-bottom: 2rem;
   display: flex;
@@ -212,8 +195,9 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 1.5rem;
-  background-color: rgb(241, 196, 15);
+  font-size: 1.2rem;
+  background-color: rgba(40, 40, 40, 0.5);
+  color: rgb(255, 255, 255);
 }
 
 .about div {
@@ -227,32 +211,72 @@ header {
 .accent {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   color: rgb(112, 25, 25);
 }
 
 /* SERVICES */
 
 .services {
+  position: relative;
+  bottom: 9rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 4rem;
+  border: 2px solid rgb(25, 25, 25);
+  margin: 0 2.5rem;
+  padding: 0 1rem;
+  overflow: hidden;
 }
 
-.services div {
-  max-width: 25rem;
+.services-card {
+  max-width: 54,625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0.5rem;
 }
 
-.designer, .frontend-developer, .information-architect {
-  padding: 2rem 0;
+.services-card > * {
+  margin: 1rem 0;
+  max-width: 19rem;
 }
 
+.info-container h1 {
+  font-size: 1.7rem;
+}
 
+.info-container p {
+  font-size: 1.2rem;
+}
+
+.summary {
+  min-height: 19rem;
+}
+
+.do-things {
+  height: 10rem;
+}
+
+.skill-tools p {
+  margin: 0;
+}
+
+.info-container i {
+  display: flex;
+  margin-bottom: 1.75rem;
+  font-size: 2.5rem;
+}
+
+.info-container > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0;
+}
 
 
 
@@ -268,6 +292,12 @@ header {
   .greetings {
     bottom: 17rem;
     padding-right: 2rem;
+  }
+
+  /* SERVICES */
+
+  .services {
+    flex-direction: column;
   }
 }
 
@@ -363,5 +393,39 @@ header {
   .greetings {
     bottom: 17rem;
     padding-right: 2rem;
+  }
+
+  /* SERVICES */
+
+  .services {
+    justify-content: space-evenly;
+  }
+
+  .services-card {
+    max-width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  .services-card > * {
+    margin: 1rem 0;
+    max-width: auto;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .summary {
+    min-height: 315px;
+  }
+
+  .do-things {
+    height: 12.5rem;
   }
 }
