@@ -230,6 +230,7 @@ header {
   margin: 0 2.5rem;
   padding: 0 1rem;
   overflow: hidden;
+  container: services / size;
 }
 
 .services-card {
@@ -281,7 +282,20 @@ header {
 
 
 
+
+
+
+
+
 /* MEDIA BREAKPOINT */
+
+/* CONTAINERS */
+
+@services and (min-width 800) {
+  .services {
+    flex-direction: colums;
+  }
+}
 
 /* COMPUTER */
 @media screen and (min-width: 851px) {}
@@ -309,7 +323,7 @@ header {
 }
 
 /* PHONES */
-@media screen and (max-width: 650px) {
+@media screen and (orientation: portrait) and (max-width: 650px) {
   html {
     font-size: 12px;
   }
@@ -377,7 +391,7 @@ header {
 }
 
 /* TABLETS */
-@media screen and (min-width: 700px) and (max-width: 800px) {
+@media screen and (orientation: portrait) and (min-width: 700px) and (max-width: 800px) {
 
   /* HEADER */
   .jumbotron {
