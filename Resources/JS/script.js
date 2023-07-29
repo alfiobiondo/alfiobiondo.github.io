@@ -103,15 +103,27 @@ let doThingsHeights = doThings.map((e) => e.offsetHeight);
 let summaryHeights = summary.map((e) => e.offsetHeight);
 let skillToolHeights = skillTools.map((e) => e.offsetHeight);
 let maxDoThingsHeight = Math.max(...doThingsHeights);
-let maxsummaryHeights = Math.max(...summaryHeights);
-let maxskillToolHeights = Math.max(...skillToolHeights);
+let maxSummaryHeights = Math.max(...summaryHeights);
+let maxSkillToolHeights = Math.max(...skillToolHeights);
 
 // set the all heights to the maximum value
-doThings.forEach((e) => e.style.height = `${maxDoThingsHeight}px`);
-summary.forEach((e) => e.style.height = `calc(${maxsummaryHeights}px + 3%)`);
-skillTools.forEach((e) => e.style.height = `${maxskillToolHeights}px`);
+doThings.forEach((e) => e.style.minHeight = `${maxDoThingsHeight}px`);
+summary.forEach((e) => e.style.minHeight = `calc(${maxSummaryHeights}px + 3%)`);
+skillTools.forEach((e) => e.style.minHeight = `${maxSkillToolHeights}px`);
 
-//reset heights of the elements on window resize
-window.onresize = doThings.forEach((e) => e.style.height = `${maxDoThingsHeight}px`);
-window.onresize = summary.forEach((e) => e.style.height = `calc(${maxsummaryHeights}px + 3%)`);
-window.onresize = skillTools.forEach((e) => e.style.height = `${maxskillToolHeights}px`);
+/* let eResize = () => {
+    // determine the maximum of all heights
+    doThingsHeights = doThings.map((e) => e.offsetHeight);
+    summaryHeights = summary.map((e) => e.offsetHeight);
+    skillToolHeights = skillTools.map((e) => e.offsetHeight);
+    minDoThingsHeight = Math.max(...doThingsHeights);
+    minSummaryHeights = Math.max(...summaryHeights);
+    minSkillToolHeights = Math.max(...skillToolHeights);
+
+    // set the all heights to the maximum value
+    doThings.forEach((e) => e.style.minHeight = `${minDoThingsHeight}px`);
+    summary.forEach((e) => e.style.minHeight = `calc(${minSummaryHeights}px + 3%)`);
+    skillTools.forEach((e) => e.style.minHeight = `${minsSkillToolHeights}px`);
+}
+
+window.onresize = eResize; */
