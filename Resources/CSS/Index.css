@@ -232,9 +232,9 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   border: 2px solid rgb(25, 25, 25);
-  margin: 0 2.5rem;
+  margin: 0 1rem;
   padding: 0 1rem;
   overflow: hidden;
   text-align: center;
