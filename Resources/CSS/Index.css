@@ -225,7 +225,6 @@ header {
   border-radius: 2rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   border: 2px solid rgb(25, 25, 25);
   margin: 0 2.5rem;
@@ -306,13 +305,6 @@ header {
 @media screen and (min-width: 851px) {}
 
 /* PHONES */
-@media screen and (width > 600px) and (orientation: portrait) {
-  .services {
-    flex-direction: row !important;
-    flex-wrap: nowrap;
-  }
-}
-
 /* @media screen and (width < 601px) {
   .services {
     flex-direction: column;
