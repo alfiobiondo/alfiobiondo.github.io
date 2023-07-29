@@ -91,3 +91,22 @@ document.onmousemove = e => handleMove(e);
 document.ontouchmove = e => handleMove(e);
 // document.onmousemove = e => cloneHeader(e);
 // document.ontouchmove = e => cloneHeader(e);
+
+//same height of all elements inside the info-cards
+
+let doThings = [...document.querySelectorAll('.do-things')];
+let summary = [...document.querySelectorAll('.summary')];
+let skillTools = [...document.querySelectorAll('.skill-tools')];
+
+// determine the maximum of all heights
+let doThingsHeights = doThings.map((e) => e.offsetHeight);
+let summaryHeights = summary.map((e) => e.offsetHeight);
+let skillToolHeights = skillTools.map((e) => e.offsetHeight);
+let maxDoThingsHeight = Math.max(...doThingsHeights);
+let maxsummaryHeights = Math.max(...summaryHeights);
+let maxskillToolHeights = Math.max(...skillToolHeights);
+
+// set the all heights to the maximum value
+doThings.forEach((e) => e.style.height = `${maxDoThingsHeight}px`);
+summary.forEach((e) => e.style.height = `${maxsummaryHeights}px`);
+skillTools.forEach((e) => e.style.height = `${maxskillToolHeights}px`);

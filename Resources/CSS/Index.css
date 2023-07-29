@@ -230,20 +230,19 @@ header {
   margin: 0 2.5rem;
   padding: 0 1rem;
   overflow: hidden;
-  container: services / size;
+  text-align: center;
 }
 
 .services-card {
-  max-width: 54,625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 3vw;
 }
 
 .services-card > * {
   margin: 1rem 0;
-  max-width: 19rem;
+  max-width: 23rem;
 }
 
 .info-container h1 {
@@ -252,14 +251,6 @@ header {
 
 .info-container p {
   font-size: 1.2rem;
-}
-
-.summary {
-  min-height: 19rem;
-}
-
-.do-things {
-  height: 10rem;
 }
 
 .skill-tools p {
@@ -291,9 +282,16 @@ header {
 
 /* CONTAINERS */
 
-@services and (min-width 800) {
+main {
+  container: main / inline-size;
+  display: flex;
+  flex-direction: column;
+}
+
+@container main (width > 670px) {
   .services {
-    flex-direction: colums;
+    flex-wrap: nowrap;
+    flex-shrink: 4;
   }
 }
 
