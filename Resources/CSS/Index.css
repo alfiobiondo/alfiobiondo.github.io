@@ -296,7 +296,7 @@ main {
   }
 }
 
-@container main (width < 600px) {
+@container main (width < 601px) {
   .services {
     flex-direction: column;
   }
