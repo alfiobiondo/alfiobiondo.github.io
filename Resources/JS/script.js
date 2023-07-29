@@ -106,24 +106,7 @@ let maxDoThingsHeight = Math.max(...doThingsHeights);
 let maxSummaryHeights = Math.max(...summaryHeights);
 let maxSkillToolHeights = Math.max(...skillToolHeights);
 
-// set the all heights to the maximum value
+// set the all heights to the minimum value
 doThings.forEach((e) => e.style.minHeight = `${maxDoThingsHeight}px`);
 summary.forEach((e) => e.style.minHeight = `calc(${maxSummaryHeights}px + 3%)`);
 skillTools.forEach((e) => e.style.minHeight = `${maxSkillToolHeights}px`);
-
-/* let eResize = () => {
-    // determine the maximum of all heights
-    doThingsHeights = doThings.map((e) => e.offsetHeight);
-    summaryHeights = summary.map((e) => e.offsetHeight);
-    skillToolHeights = skillTools.map((e) => e.offsetHeight);
-    minDoThingsHeight = Math.max(...doThingsHeights);
-    minSummaryHeights = Math.max(...summaryHeights);
-    minSkillToolHeights = Math.max(...skillToolHeights);
-
-    // set the all heights to the maximum value
-    doThings.forEach((e) => e.style.minHeight = `${minDoThingsHeight}px`);
-    summary.forEach((e) => e.style.minHeight = `calc(${minSummaryHeights}px + 3%)`);
-    skillTools.forEach((e) => e.style.minHeight = `${minsSkillToolHeights}px`);
-}
-
-window.onresize = eResize; */

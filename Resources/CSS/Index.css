@@ -288,8 +288,9 @@ main {
   flex-direction: column;
 }
 
-@container main (width > 650px) {
+@container main (width > 600px) {
   .services {
+    flex-direction: row !important;
     flex-wrap: nowrap;
   }
 }
