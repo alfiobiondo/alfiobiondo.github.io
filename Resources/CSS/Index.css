@@ -201,6 +201,8 @@ header {
 }
 
 .about div {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 1rem;
   /* font-size: 1.2rem; */
 }
