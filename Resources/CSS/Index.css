@@ -306,18 +306,18 @@ main {
 @media screen and (min-width: 851px) {}
 
 /* PHONES */
-@media screen and (width > 600px) {
+@media screen and (width > 600px) and (orientation: portrait) {
   .services {
     flex-direction: row !important;
     flex-wrap: nowrap;
   }
 }
 
-@media screen and (width < 601px) {
+/* @media screen and (width < 601px) {
   .services {
     flex-direction: column;
   }
-}
+} */
 
 @media screen and (max-width: 670px) {
   /* HEADER */
@@ -406,6 +406,11 @@ main {
   .greetings {
     bottom: 14.5rem;
     padding-right: 2rem;
+  }
+
+  /* SERVICES */
+  .services {
+    flex-direction: column;
   }
 }
 
