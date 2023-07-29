@@ -202,6 +202,10 @@ header {
 
 .about div {
   padding-bottom: 1rem;
+  /* font-size: 1.2rem; */
+}
+
+.about div p {
   font-size: 1.2rem;
 }
 
@@ -283,34 +287,8 @@ header {
 
 /* CONTAINERS */
 
-/* main {
-  container: main / inline-size;
-  display: flex;
-  flex-direction: column;
-}
-
-@container main (width > 600px) {
-  .services {
-    flex-direction: row !important;
-    flex-wrap: nowrap;
-  }
-}
-
-@container main (width < 601px) {
-  .services {
-    flex-direction: column;
-  }
-} */
-
 /* COMPUTER */
 @media screen and (min-width: 851px) {}
-
-/* PHONES */
-/* @media screen and (width < 601px) {
-  .services {
-    flex-direction: column;
-  }
-} */
 
 @media screen and (max-width: 670px) {
   /* HEADER */
@@ -318,13 +296,6 @@ header {
     bottom: 11rem;
     padding-right: 2rem;
   }
-
-  /* SERVICES */
-
- /*  .services {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  } */
 }
 
 /* PHONES */
@@ -385,8 +356,7 @@ header {
     width: 90vw;
   }
 
-/* HEADER */
-
+  /* HEADER */
   .jumbotron {
     background-color: rgb(40, 40, 40);
     background-image: url(../Images/Profile_picture_circle.png), linear-gradient(to top, rgb(40, 40, 40), rgb(40, 40, 40));
