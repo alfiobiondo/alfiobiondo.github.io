@@ -225,6 +225,7 @@ header {
   border-radius: 2rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
   border: 2px solid rgb(25, 25, 25);
   margin: 0 2.5rem;
