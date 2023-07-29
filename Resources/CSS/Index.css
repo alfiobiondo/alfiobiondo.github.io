@@ -306,6 +306,19 @@ main {
 @media screen and (min-width: 851px) {}
 
 /* PHONES */
+@media screen and (width > 600px) {
+  .services {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (width < 601px) {
+  .services {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 670px) {
   /* HEADER */
   .greetings {
@@ -318,8 +331,8 @@ main {
  /*  .services {
     flex-wrap: nowrap;
     flex-direction: column;
-  }
-}*/
+  } */
+}
 
 /* PHONES */
 @media screen and (max-width: 850px) {
@@ -414,3 +427,4 @@ main {
     bottom: 17rem;
     padding-right: 2rem;
   }
+}
