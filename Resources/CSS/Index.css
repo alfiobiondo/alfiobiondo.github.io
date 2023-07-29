@@ -165,7 +165,7 @@ header {
 
 .greetings {
   position: relative;
-  bottom: 13rem;
+  bottom: 12rem;
   padding-left: 2rem;
   padding-bottom: 2rem;
   display: flex;
@@ -175,15 +175,15 @@ header {
 }
 
 .greetings span:first-child {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
 }
 
 .greetings span:nth-child(2) {
-  font-size: 4rem;
+  font-size: 3.25rem;
 }
 
 .greetings span:nth-child(3) {
-  font-size: 3.25rem;
+  font-size: 2.5rem;
 }
 
 /* ABOUT */
@@ -288,10 +288,9 @@ main {
   flex-direction: column;
 }
 
-@container main (width > 670px) {
+@container main (width > 650px) {
   .services {
     flex-wrap: nowrap;
-    flex-shrink: 4;
   }
 }
 
@@ -309,6 +308,7 @@ main {
   /* SERVICES */
 
   .services {
+    /* flex-wrap: nowrap; */
     flex-direction: column;
   }
 }
@@ -383,7 +383,7 @@ main {
   }
 
   .greetings {
-    bottom: 22rem;
+    bottom: 15rem;
     padding-right: 2rem;
   }
 }
@@ -406,38 +406,3 @@ main {
     bottom: 17rem;
     padding-right: 2rem;
   }
-
-  /* SERVICES */
-
-  .services {
-    justify-content: space-evenly;
-  }
-
-  .services-card {
-    max-width: 15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-  }
-  
-  .services-card > * {
-    margin: 1rem 0;
-    max-width: auto;
-  }
-
-  .info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .summary {
-    min-height: 315px;
-  }
-
-  .do-things {
-    height: 12.5rem;
-  }
-}
