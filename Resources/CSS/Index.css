@@ -295,6 +295,12 @@ main {
   }
 }
 
+@container main (width < 600px) {
+  .services {
+    flex-direction: column;
+  }
+}
+
 /* COMPUTER */
 @media screen and (min-width: 851px) {}
 
@@ -302,17 +308,17 @@ main {
 @media screen and (max-width: 670px) {
   /* HEADER */
   .greetings {
-    bottom: 17rem;
+    bottom: 11rem;
     padding-right: 2rem;
   }
 
   /* SERVICES */
 
-  .services {
-    /* flex-wrap: nowrap; */
+ /*  .services {
+    flex-wrap: nowrap;
     flex-direction: column;
   }
-}
+}*/
 
 /* PHONES */
 @media screen and (max-width: 850px) {
