@@ -108,5 +108,5 @@ let maxskillToolHeights = Math.max(...skillToolHeights);
 
 // set the all heights to the maximum value
 doThings.forEach((e) => e.style.height = `${maxDoThingsHeight}px`);
-summary.forEach((e) => e.style.height = `${maxsummaryHeights}px`);
+summary.forEach((e) => e.style.height = `calc(${maxsummaryHeights}px + 3%)`);
 skillTools.forEach((e) => e.style.height = `${maxskillToolHeights}px`);
