@@ -94,19 +94,19 @@ document.ontouchmove = e => handleMove(e);
 
 //same height of all elements inside the info-cards
 
-let doThings = [...document.querySelectorAll('.do-things')];
+/* let doThings = [...document.querySelectorAll('.do-things')];
 let summary = [...document.querySelectorAll('.summary')];
-let skillTools = [...document.querySelectorAll('.skill-tools')];
+let skillTools = [...document.querySelectorAll('.skill-tools')]; */
 
 // determine the maximum of all heights
-let doThingsHeights = doThings.map((e) => e.offsetHeight);
+/* let doThingsHeights = doThings.map((e) => e.offsetHeight);
 let summaryHeights = summary.map((e) => e.offsetHeight);
 let skillToolHeights = skillTools.map((e) => e.offsetHeight);
 let maxDoThingsHeight = Math.max(...doThingsHeights);
 let maxSummaryHeights = Math.max(...summaryHeights);
-let maxSkillToolHeights = Math.max(...skillToolHeights);
+let maxSkillToolHeights = Math.max(...skillToolHeights); */
 
 // set the all heights to the minimum value
-doThings.forEach((e) => e.style.minHeight = `${maxDoThingsHeight}px`);
+/* doThings.forEach((e) => e.style.minHeight = `${maxDoThingsHeight}px`);
 summary.forEach((e) => e.style.minHeight = `calc(${maxSummaryHeights}px + 3%)`);
-skillTools.forEach((e) => e.style.minHeight = `${maxSkillToolHeights}px`);
+skillTools.forEach((e) => e.style.minHeight = `${maxSkillToolHeights}px`); */
