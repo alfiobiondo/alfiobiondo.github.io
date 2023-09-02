@@ -5,6 +5,7 @@
     font-family: 'Segoe UI', sans-serif;
     text-decoration: none;
     list-style-type: none;
+    scroll-behavior: smooth;
   }   
 
 a{
@@ -191,7 +192,7 @@ header {
 
 /* ABOUT */
 
-.about {
+#about {
   padding: 7rem 2rem 15rem 2rem;
   width: 100vw;
   height: auto;
@@ -203,7 +204,7 @@ header {
   color: rgb(255, 255, 255);
 }
 
-.about div {
+#about div {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -215,7 +216,7 @@ header {
   /* font-size: 1.2rem; */
 }
 
-.about div p {
+#about div p {
   font-size: 1.2rem;
 }
 
@@ -228,7 +229,7 @@ header {
 
 /* SERVICES */
 
-.services {
+#services {
   position: relative;
   bottom: 9rem;
   background-color: rgb(255, 255, 255);
@@ -343,7 +344,7 @@ header {
   font-size: 1.2rem;
 }
 
-.my-works {
+#my-works {
   display: flex;
   transform: translateY(-3rem);
   height: auto;
@@ -539,16 +540,16 @@ header {
 
   /* ABOUT */
 
-  .about{
+  #about{
     padding: 5rem 2rem 13rem 2rem;
   }
 
-  .about div {
+  #about div {
     width: auto;
   }
 
   /* SERVICES */
-  .services {
+  #services {
    grid-template: 
     "des" auto
     "desdt" auto
