@@ -6,6 +6,10 @@
     text-decoration: none;
     list-style-type: none;
   }   
+
+a{
+  color: rgb(47, 112, 25);
+}
    
 body {
   position: relative;
@@ -166,8 +170,7 @@ header {
 .greetings {
   position: relative;
   bottom: 11rem;
-  padding-left: 2rem;
-  padding-bottom: 2rem;
+  padding-left: 12.5vw;
   display: flex;
   flex-direction: column;
   color: rgb(255, 255, 255);
@@ -189,20 +192,25 @@ header {
 /* ABOUT */
 
 .about {
-  padding: 2rem;
+  padding: 7rem 2rem 15rem 2rem;
   width: 100vw;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /* font-size: 1.2rem; */
-  background-color: rgba(40, 40, 40, 0.5);
+  background: rgba(40, 40, 40, 0.5);
   color: rgb(255, 255, 255);
 }
 
 .about div {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  align-self: center;
+  gap: 0.25rem;
+  width: 75vw;
   padding-bottom: 1rem;
   /* font-size: 1.2rem; */
 }
@@ -211,16 +219,12 @@ header {
   font-size: 1.2rem;
 }
 
-.about div:nth-child(3) {
-  padding-bottom: 10rem;
-}
-
-.accent {
+/* .accent {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.35rem;
   color: rgb(112, 25, 25);
-}
+} */
 
 /* SERVICES */
 
@@ -318,8 +322,121 @@ header {
   padding-top: 1.5rem;
 }
 
+/* MY WORKS */
 
+.section-title{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 0.5rem;
+}
 
+.section-title h1{
+  text-transform: capitalize;
+  font-size: 1.7rem;
+}
+
+.section-title p{
+  font-size: 1.2rem;
+}
+
+.my-works {
+  display: flex;
+  transform: translateY(-3rem);
+  height: auto;
+  width: 100vw;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 0 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  width: max(45vw, 350px);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: rgba(40, 40, 40, 0.75);
+}
+
+.card-image {
+  object-fit: contain;
+  scale: 1.15;
+  transition: opacity 0.25s, scale 0.35s;
+}
+
+.card:hover .card-image{
+  opacity: 0.45;
+  scale: 1;
+}
+
+.card-body {
+  width: inherit;
+  aspect-ratio: inherit;
+  position: absolute;
+  padding: 3.125rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  justify-content: space-around;
+}
+
+.card-body a {
+  color: inherit;
+  align-self: flex-end;
+  justify-self: baseline;
+}
+
+.fa-arrow-right{
+  transform: translateY(0.2rem) rotate(-45deg);
+}
+
+.card-body::before{
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  opacity: 0;
+  scale: 1.25;
+  transition: opacity 0.25s, scale 0.25s;
+}
+
+.card:hover .card-body::before{
+  opacity: 1;
+  scale: 1;
+}
+
+.card-title {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px rgba(40, 40, 40, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s, scale 0.5s;
+}
+
+.card-description {
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.5s, scale 0.5s;
+}
+
+.card:hover :is(.card-description, .card-title){
+  opacity: 1;
+  translate: 0;
+}
 
 
 
@@ -333,7 +450,11 @@ header {
 /* CONTAINERS */
 
 /* COMPUTER */
-@media screen and (min-width: 851px) {}
+@media screen and (min-width: 851px) {
+  .greetings{
+    bottom: calc(5rem + 12.5vw);
+  }
+}
 
 @media screen and (max-width: 670px) {
   /* HEADER */
@@ -412,8 +533,18 @@ header {
   }
 
   .greetings {
-    bottom: 14.5rem;
+    bottom: calc(13rem + 12.5vw);
     padding-right: 2rem;
+  }
+
+  /* ABOUT */
+
+  .about{
+    padding: 5rem 2rem 13rem 2rem;
+  }
+
+  .about div {
+    width: auto;
   }
 
   /* SERVICES */
