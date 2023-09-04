@@ -355,18 +355,27 @@ header {
 }
 
 .card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template:
+    "card1 card2" auto / 1fr 1fr;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
   gap: 1.5rem;
 }
 
 .card {
   display: flex;
-  width: max(45vw, 350px);
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background-color: rgba(40, 40, 40, 0.75);
+}
+
+.card-1 {
+  grid-area: card1;
+}
+
+.card-2 {
+  grid-area: card2;
 }
 
 .card-image {
@@ -381,7 +390,7 @@ header {
 }
 
 .card-body {
-  width: inherit;
+  width: 46.5%;
   aspect-ratio: inherit;
   position: absolute;
   padding: 3.125rem;
@@ -454,6 +463,10 @@ header {
 @media screen and (min-width: 851px) {
   .greetings{
     bottom: calc(5rem + 12.5vw);
+  }
+
+  .card-body {
+    width: 47.5%;
   }
 }
 
@@ -562,6 +575,22 @@ header {
     "ia" auto
     "iadt" auto
     "iast" auto / 1fr;
+  }
+
+  /* MY WORKS */
+
+  .card-body {
+    width: 90%;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template:
+    "card1" auto
+    "card2" auto;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    gap: 1.5rem;
   }
 }
 
