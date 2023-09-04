@@ -368,6 +368,9 @@ header {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background-color: rgba(40, 40, 40, 0.75);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-1 {
@@ -381,6 +384,7 @@ header {
 .card-image {
   object-fit: contain;
   object-position: center;
+  width: 100%;
   scale: 1.15;
   transition: opacity 0.25s, scale 0.35s;
 }
