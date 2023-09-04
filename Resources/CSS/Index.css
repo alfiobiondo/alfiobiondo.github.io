@@ -380,6 +380,7 @@ header {
 
 .card-image {
   object-fit: contain;
+  object-position: center;
   scale: 1.15;
   transition: opacity 0.25s, scale 0.35s;
 }
