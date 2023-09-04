@@ -365,7 +365,7 @@ header {
 
 .card {
   display: flex;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   background-color: rgba(40, 40, 40, 0.75);
 }
