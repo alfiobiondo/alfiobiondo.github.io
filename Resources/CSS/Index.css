@@ -497,6 +497,7 @@ header {
 
 #get-in-touch p {
   font-size: 1.2rem;
+  width: 75vw;
 }
 
 
@@ -512,7 +513,7 @@ header {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.15385;
-  margin: 0;
+  margin: 2rem 0 0 0;
   outline: none;
   padding: 8px .8em;
   position: relative;
@@ -707,6 +708,12 @@ footer a {
     gap: 1.5rem;
   }
 
+  /* GET IN TOUCH */
+  #get-in-touch p {
+    width: auto;
+    text-align: justify;
+  }
+
   /* FOOTER */
   footer {
     flex-direction: column;
@@ -734,5 +741,10 @@ footer a {
   .greetings {
     bottom: 17rem;
     padding-right: 2rem;
+  }
+
+  /* GET IN TOUCH */
+  #get-in-touch p {
+    width: 70vw;
   }
 }
