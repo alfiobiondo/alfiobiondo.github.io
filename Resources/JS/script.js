@@ -7,6 +7,7 @@ let socialMedia = document.querySelector(".social-media-icons");
 let header = document.querySelector(".jumbotron-container");
 let jumbotron = document.querySelector(".jumbotron");
 let greetings = document.querySelector(".greetings");
+let mailButton = document.querySelector(".mail-button");
 //const menuElements = [menu, logo, navLinks, socialMedia];
 
 var viewport = window.matchMedia("(max-width: 650px)")
@@ -110,3 +111,11 @@ let maxSkillToolHeights = Math.max(...skillToolHeights); */
 /* doThings.forEach((e) => e.style.minHeight = `${maxDoThingsHeight}px`);
 summary.forEach((e) => e.style.minHeight = `calc(${maxSummaryHeights}px + 3%)`);
 skillTools.forEach((e) => e.style.minHeight = `${maxSkillToolHeights}px`); */
+
+const emailAddress = "alfiobiondo@icloud.com";
+
+if (mailButton) {
+    mailButton.addEventListener("click", () => {
+        window.open(`mailto:${emailAddress}`, '_blank');
+    })
+}

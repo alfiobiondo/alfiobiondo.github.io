@@ -244,6 +244,7 @@ header {
   padding: 0 2rem;
   gap: 0.75rem 2rem;
   text-align: center;
+  box-shadow: 7.5px 7.5px 5px rgba(40, 40, 40, 0.5);
 }
 
 #des {
@@ -344,7 +345,13 @@ header {
   font-size: 1.2rem;
 }
 
+.section-title p a:hover {
+  font-size: 1.3rem;
+  transition: 0.25s;
+}
+
 #my-works {
+  position: relative;
   display: flex;
   transform: translateY(-3rem);
   height: auto;
@@ -352,6 +359,7 @@ header {
   flex-direction: column;
   gap: 5rem;
   padding: 0 1.5rem;
+  z-index: 1;
 }
 
 .card-container {
@@ -371,6 +379,8 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  border: 2px solid rgb(25, 25, 25);
+  border-radius: 1rem;
 }
 
 .card-1 {
@@ -387,6 +397,7 @@ header {
   width: 100%;
   scale: 1.15;
   transition: opacity 0.25s, scale 0.35s;
+  border-radius: 1rem;
 }
 
 .card:hover .card-image{
@@ -406,12 +417,20 @@ header {
   align-items: center;
   row-gap: 1rem;
   justify-content: space-around;
+  box-shadow: 7.5px 7.5px 5px rgba(40, 40, 40, 0.5);
+  border-radius: 1rem;
+  transition: 0.25s;
 }
 
 .card-body a {
   color: inherit;
   align-self: flex-end;
   justify-self: baseline;
+  transition: 0.25s;
+}
+
+.card-body a:hover {
+  font-size: 1.3rem;
 }
 
 .fa-arrow-right{
@@ -426,6 +445,7 @@ header {
   opacity: 0;
   scale: 1.25;
   transition: opacity 0.25s, scale 0.25s;
+  border-radius: 0.75rem;
 }
 
 .card:hover .card-body::before{
@@ -454,10 +474,75 @@ header {
 }
 
 
+/* GET IN TOUCH */
+
+#get-in-touch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 15rem 2rem 7rem 2rem;
+  background: rgba(40, 40, 40, 0.5);
+  color: rgb(255, 255, 255);
+  transform: translateY(-10rem);
+}
+
+#get-in-touch h1 {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 10px rgba(40, 40, 40, 0.5);
+}
+
+#get-in-touch p {
+  font-size: 1.2rem;
+}
 
 
+.mail-button {
+  background-color: rgba(40, 40, 40, 0.25);
+  border-radius: 3px;
+  border: 1px solid rgba(40, 40, 40, 0.5);
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  transition: 0.15s;
+}
 
+.mail-button:hover,
+.mail-button:focus {
+  background-color: rgba(47, 112, 25, 0.95);
+  color: rgb(255, 255, 255);
+  scale: 1.05;
+}
 
+.mail-button:focus {
+  box-shadow: 0 0 0 2px rgba(40, 40, 40, 0.75);
+}
+
+.mail-button:active {
+  background-color: rgba(47, 112, 25, 0.50);
+  box-shadow: none;
+  color: rgb(255, 255, 255);
+}
 
 
 /* MEDIA BREAKPOINT */
