@@ -8,7 +8,7 @@ let header = document.querySelector(".jumbotron-container");
 let jumbotron = document.querySelector(".jumbotron");
 let greetings = document.querySelector(".greetings");
 let mailButton = document.querySelector(".mail-button");
-let scrollElement = document.querySelector(".js-scroll");
+let scrollElements = document.querySelectorAll(".js-scroll");
 
 //const menuElements = [menu, logo, navLinks, socialMedia];
 
@@ -85,30 +85,40 @@ const throttle = (callback, time) => {
 }
 
 //Detecting When an Element Is in View
-const scrollOffset = 100;
+/* const scrollOffset = 100; */
 
-const elementInView = (el, offset = 0) => {
+const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
   return (
     elementTop <= 
-    ((window.innerHeight || document.documentElement.clientHeight) - offset)
+    ((window.innerHeight || document.documentElement.clientHeight) / dividend)
   );
 };
 
-const displayScrollElement = () => {
-  scrollElement.classList.add('scrolled');
+const elementOutofView = (el) => {
+    const elementTop = el.getBoundingClientRect().top;
+  
+    return (
+      elementTop > (window.innerHeight || document.documentElement.clientHeight)
+    );
+};
+
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
 }
 
-const hideScrollElement = () => {
-  scrollElement.classList.remove('scrolled');
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
 }
 
 const handleScrollAnimation = () => {
-  if (elementInView(scrollElement, scrollOffset)) {
-      displayScrollElement();
-  } else {
-    hideScrollElement();
-  }
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 1.25)) {
+        displayScrollElement(el);
+      } else if (elementOutofView(el)) {
+        hideScrollElement(el)
+      }
+    })
 }
 
 window.addEventListener("scroll", () => {
@@ -118,13 +128,12 @@ window.addEventListener("scroll", () => {
     }
 });
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
     throttle(handleScrollAnimation, 250);
 })
 
 //slider Header
 let cloneHeaderalreadyExists = false;
-
 
 
 const handleMove = e => {   
@@ -145,9 +154,8 @@ const handleMove = e => {
     } 
 }
 
-
-document.onmousemove = e => handleMove(e);
-document.ontouchmove = e => handleMove(e);
+setTimeout(() => {document.onmousemove = e => handleMove(e)}, 2000);
+/* document.ontouchmove = e => handleMove(e); */
 // document.onmousemove = e => cloneHeader(e);
 // document.ontouchmove = e => cloneHeader(e);
 
