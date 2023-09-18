@@ -143,6 +143,8 @@ const handleMove = e => {
         } else {
             let headerClone = header.cloneNode(true);
             headerClone.classList.replace("jumbotron-container", "header-clone");
+            headerClone.querySelector(".jumbotron").classList.remove("fade-in")
+            headerClone.querySelector(".greetings").classList.remove("slide-left")
             header.after(headerClone);
             cloneHeaderalreadyExists = true;
         }
@@ -154,7 +156,7 @@ const handleMove = e => {
     } 
 }
 
-setTimeout(() => {document.onmousemove = e => handleMove(e)}, 2000);
+setTimeout(() => {document.onmousemove = e => handleMove(e)}, 5000);
 /* document.ontouchmove = e => handleMove(e); */
 // document.onmousemove = e => cloneHeader(e);
 // document.ontouchmove = e => cloneHeader(e);
