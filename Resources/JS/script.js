@@ -8,8 +8,11 @@ let header = document.querySelector(".jumbotron-container");
 let jumbotron = document.querySelector(".jumbotron");
 let greetings = document.querySelector(".greetings");
 let mailButton = document.querySelector(".mail-button");
+let scrollElement = document.querySelector(".js-scroll");
+
 //const menuElements = [menu, logo, navLinks, socialMedia];
 
+let mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 var viewport = window.matchMedia("(max-width: 650px)")
 var viewportFull = window.matchMedia("(min-width: 801px)")
 
@@ -63,6 +66,61 @@ document.addEventListener('click', function handleClickOutsideMenu(event) {
         }
     }
 });
+
+//initialize throttleTimer as false 
+let throttleTimer = false;
+
+const throttle = (callback, time) => {
+    //don't run the function while throttle timer is true 
+    if (throttleTimer) return;
+    
+    //first set throttle timer to true so the function doesn't run 
+    throttleTimer = true;
+    
+    setTimeout(() => {
+        //call the callback function in the setTimeout and set the throttle timer to false after the indicated time has passed 
+        callback();
+        throttleTimer = false;
+	}, time);
+}
+
+//Detecting When an Element Is in View
+const scrollOffset = 100;
+
+const elementInView = (el, offset = 0) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop <= 
+    ((window.innerHeight || document.documentElement.clientHeight) - offset)
+  );
+};
+
+const displayScrollElement = () => {
+  scrollElement.classList.add('scrolled');
+}
+
+const hideScrollElement = () => {
+  scrollElement.classList.remove('scrolled');
+}
+
+const handleScrollAnimation = () => {
+  if (elementInView(scrollElement, scrollOffset)) {
+      displayScrollElement();
+  } else {
+    hideScrollElement();
+  }
+}
+
+window.addEventListener("scroll", () => {
+    //check if mediaQuery exists and if the value for mediaQuery does not match 'reduce', return the scrollAnimation. 
+    if (mediaQuery && !mediaQuery.matches) {
+      handleScrollAnimation()
+    }
+});
+
+window.addEventListener('scroll', () => {
+    throttle(handleScrollAnimation, 250);
+})
 
 //slider Header
 let cloneHeaderalreadyExists = false;
