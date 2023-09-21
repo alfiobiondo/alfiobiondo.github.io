@@ -162,6 +162,7 @@ header {
   background-repeat: no-repeat;
   background-size: auto 100vh;
   z-index: 3;
+  animation: 1s ease-in-out fade-in;
 }
 
 .header-clone .jumbotron {
@@ -177,6 +178,8 @@ header {
   flex-direction: column;
   color: rgb(255, 255, 255);
   z-index: 4;
+  opacity: 0;
+  animation: 1s ease-in-out 1s forwards slide-in-left;
 }
 
 .greetings span:first-child {
