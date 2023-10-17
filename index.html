@@ -1,216 +1,278 @@
 <!DOCTYPE html>
 
 <html>
+	<head>
+		<title>Personal Portfolio</title>
+		<link href="./Resources/CSS/Index.css" type="text/css" rel="stylesheet" />
+		<script
+			type="text/javascript"
+			src="./Resources/JS/script.js"
+			defer></script>
+		<script
+			src="https://kit.fontawesome.com/71c34aa4c8.js"
+			crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
 
-<head>
+	<body>
+		<nav class="nav-container">
+			<!-- HAMBURGER LINES -->
+			<div class="hamburger">
+				<i class="fa-solid fa-bars"></i>
+			</div>
 
-  <title>Personal Portfolio</title>
-  <link href="./Resources/CSS/Index.css" type="text/css" rel="stylesheet">
-  <script type="text/javascript" src="./Resources/JS/script.js" defer></script>
-  <script src="https://kit.fontawesome.com/71c34aa4c8.js" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<div id="logo">
+				<a href="index.html">
+					<img src="./Resources/Images/Logo.svg" />
+				</a>
+			</div>
 
-</head>
+			<!-- LINKS -->
+			<ul id="nav-links">
+				<li><a href="#about" class="links">ABOUT ME</a></li>
+				<li><a href="#services" class="links">SERVICES</a></li>
+				<li><a href="#my-works" class="links">MY WORKS</a></li>
+				<li><a href="#get-in-touch" class="links">GET IN TOUCH</a></li>
+			</ul>
 
-<body>
-    
- <nav class="nav-container">
+			<!-- SOCIAL MEDIA -->
+			<div class="social-media-icons">
+				<a href="https://www.linkedin.com/in/alfio-biondo">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+				<a href="https://github.com/alfiobiondo">
+					<i class="fa-brands fa-github"></i>
+				</a>
+				<a href="https://www.twitter.com/alfiobiondo">
+					<i class="fa-brands fa-twitter"></i>
+				</a>
+				<a href="https://www.instagram.com/alfiobiondo">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+			</div>
+		</nav>
 
-  <!-- HAMBURGER LINES -->
-  <div class="hamburger">
-    <i class="fa-solid fa-bars"></i>
-  </div>
+		<header class="jumbotron-container">
+			<div class="jumbotron"></div>
 
-  <div id="logo">
-    <a href="index.html">
-      <img src="./Resources/Images/Logo.svg"/>
-    </a>
-  </div>
+			<h1 class="greetings">
+				<span>Hi there, my name is</span>
+				<span>Alfio Biondo</span>
+				<span>I design and develop things for the web</span>
+			</h1>
+		</header>
 
-  <!-- LINKS -->
-  <ul id="nav-links">
-    <li><a href="#about" class="links">ABOUT ME</a></li>
-    <li><a href="#services" class="links">SERVICES</a></li>
-    <li><a href="#my-works" class="links">MY WORKS</a></li>
-    <li><a href="#get-in-touch" class="links">GET IN TOUCH</a></li>
-  </ul>
+		<main>
+			<section id="about" class="scroll-container">
+				<div class="scroll-element js-scroll fade-in-bottom">
+					<p>
+						I am a young architect from Italy who has fallen in love with the
+						concept of <span class="accent">'experience'</span>.
+					</p>
+					<p>
+						Throughout my career, I have often felt confined by the conventional
+						and tangible approach to architectural design, which primarily
+						revolves around the physical aspects of our surroundings.
+					</p>
+				</div>
 
-  <!-- SOCIAL MEDIA -->
-  <div class="social-media-icons">
-    <a href="https://www.linkedin.com/in/alfio-biondo">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/alfiobiondo">
-      <i class="fa-brands fa-github"></i>
-    </a>
-    <a href="https://www.twitter.com/alfiobiondo">
-      <i class="fa-brands fa-twitter"></i>
-    </a>
-    <a href="https://www.instagram.com/alfiobiondo">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-  </div>
+				<div class="scroll-element js-scroll fade-in-bottom">
+					<p>Fast-forward to today,</p>
+					<p>
+						a master in <span class="accent">information architecture</span> and
+						<span class="accent">user experience design</span> in my pocket and
+						the belief that this is the way to explore a whole new world of
+						designing spaces beyond the norm
+					</p>
+				</div>
 
- </nav>
+				<div class="scroll-element js-scroll fade-in-bottom">
+					<p>
+						When I'm not at the computer, I'm usually guitar playing, trekking,
+						or hanging out with my friends with a cold one to keep us company.
+					</p>
+				</div>
+			</section>
 
- <header class="jumbotron-container">
+			<section id="services" class="scroll-container">
+				<div
+					id="des"
+					class="summary info-container scroll-element js-scroll fade-in-bottom">
+					<i class="fa-solid fa-pen-ruler"></i>
+					<h1>Designer</h1>
+					<p>
+						Content structure that is clear and uncluttered, design patterns
+						that embody cleanliness, and interactions that are carefully crafted
+						to enhance user experience.
+					</p>
+				</div>
 
-  <div class="jumbotron"></div>
+				<div
+					id="desdt"
+					class="do-things info-container scroll-element js-scroll fade-in-bottom">
+					<h2>I like to design:</h2>
+					<p>UX, UI, Web, Apps, Logos, Videos</p>
+				</div>
 
-  <h1 class="greetings">
-    <span>Hi there, my name is</span>
-    <span>Alfio Biondo</span>
-    <span>I design and develop things for the web</span>
-  </h1>
+				<div
+					id="desst"
+					class="skill-tools info-container scroll-element js-scroll fade-in-bottom">
+					<h2>Design Tools:</h2>
+					<p>Figma</p>
+					<p>Adobe Creative Cloud</p>
+					<p>Font Awesome</p>
+					<p>Miro</p>
+					<p>Pen & Paper</p>
+				</div>
 
- </header>
+				<hr class="hr1" />
 
- <main>
+				<div
+					id="dev"
+					class="summary info-container scroll-element js-scroll fade-in-bottom">
+					<i class="fa-solid fa-code"></i>
+					<h1>Frontend Developer</h1>
+					<p>
+						Coding things from the ground up and bringing ideas to life directly
+						in the web browser.
+					</p>
+				</div>
 
-  <section id="about" class="scroll-container">
-    <div class="scroll-element js-scroll fade-in-bottom">
-      <p>I am a young architect from Italy who has fallen in love with the concept of <span class="accent">'experience'</span>.</p>
-      <p>Throughout my career, I have often felt confined by the conventional and tangible approach to architectural design, which primarily revolves around the physical aspects of our surroundings.</p> 
-    </div>
+				<div
+					id="devdt"
+					class="do-things info-container scroll-element js-scroll fade-in-bottom">
+					<h2>Languages I speak:</h2>
+					<p>HTML, CSS, Javascript, Git, Node, Mocha</p>
+				</div>
 
-    <div class="scroll-element js-scroll fade-in-bottom">
-      <p>Fast-forward to today,</p> 
-      <p>a master in <span class="accent">information architecture</span> and <span class="accent">user experience design</span> in my pocket and the belief that this is the way to explore a whole new world of designing spaces beyond the norm</p> 
-    </div>
+				<div
+					id="devst"
+					class="skill-tools info-container scroll-element js-scroll fade-in-bottom">
+					<h2>Dev Tools:</h2>
+					<p>Visual Studio Code</p>
+					<p>Github</p>
+					<p>Responsively</p>
+					<p>Terminal</p>
+				</div>
 
-    <div class="scroll-element js-scroll fade-in-bottom">
-      <p>When I'm not at the computer, I'm usually guitar playing, trekking, or hanging out with my friends with a cold one to keep us company.</p>
-    </div>
-  </section>
+				<hr class="hr2" />
 
-  <section id="services" class="scroll-container">
+				<div
+					id="ia"
+					class="summary info-container scroll-element js-scroll fade-in-bottom">
+					<i class="fa-solid fa-sitemap"></i>
+					<h1>Information Architect</h1>
+					<p>
+						Identifying and representing the structure of informational and
+						functional elements within a web domain, aiming to enhance their
+						accessibility, functionality, and usability through a user-centered
+						design approach.
+					</p>
+				</div>
 
-    <div id="des" class="summary info-container scroll-element js-scroll fade-in-bottom">
-      <i class="fa-solid fa-pen-ruler"></i>
-      <h1>Designer</h1>
-      <p>Content structure that is clear and uncluttered, design patterns that embody cleanliness, and interactions that are carefully crafted to enhance user experience.</p>
-    </div>
-      
-    <div id="desdt" class="do-things info-container scroll-element js-scroll fade-in-bottom">
-      <h2>I like to design:</h2>
-      <p>UX, UI, Web, Apps, Logos, Videos</p>
-    </div>
-      
-    <div id="desst" class="skill-tools info-container scroll-element js-scroll fade-in-bottom">
-      <h2>Design Tools:</h2>
-      <p>Figma</p>
-      <p>Adobe Creative Cloud</p>
-      <p>Font Awesome</p>
-      <p>Miro</p>
-      <p>Pen & Paper</p>
-    </div>
-  
-    <hr class="hr1">
+				<div
+					id="iadt"
+					class="do-things info-container scroll-element js-scroll fade-in-bottom">
+					<h2>Things I analyze:</h2>
+					<p>
+						Project goals, Information structure, User flow, Interaction and
+						functionalities, Layout and design, Accessibility
+					</p>
+				</div>
 
-    <div id="dev" class="summary info-container scroll-element js-scroll fade-in-bottom">
-      <i class="fa-solid fa-code"></i>
-      <h1>Frontend Developer</h1>
-      <p>Coding things from the ground up and bringing ideas to life directly in the web browser.</p>
-    </div>
-      
-    <div id="devdt" class="do-things info-container scroll-element js-scroll fade-in-bottom">
-      <h2>Languages I speak:</h2>
-      <p>HTML, CSS, Javascript, Git, Node</p>
-    </div>
-      
-    <div id="devst" class="skill-tools info-container scroll-element js-scroll fade-in-bottom">
-      <h2>Dev Tools:</h2>
-      <p>Visual Studio Code</p>
-      <p>Github</p>
-      <p>Responsively</p>
-      <p>Terminal</p>
-    </div>
-    
-    <hr class="hr2">
-    
-    <div id="ia" class="summary info-container scroll-element js-scroll fade-in-bottom">
-      <i class="fa-solid fa-sitemap"></i>
-      <h1>Information Architect</h1>
-      <p>Identifying and representing the structure of informational and functional elements within a web domain, aiming to enhance their accessibility, functionality, and usability through a user-centered design approach.</p>
-    </div>
-      
-    <div id="iadt" class="do-things info-container scroll-element js-scroll fade-in-bottom">
-      <h2>Things I analyze:</h2>
-      <p>Project goals, Information structure, User flow, Interaction and functionalities, Layout and design, Accessibility</p>
-    </div>
-      
-    <div id="iast" class="skill-tools info-container scroll-element js-scroll fade-in-bottom">
-      <h2>IA Tools:</h2>
-      <p>Stakeholder analysis</p>
-      <p>Benchmarking</p>
-      <p>Free listing</p>
-      <p>Card sorting</p>
-      <p>Affinity diagrams</p>
-      <p>Personas</p>
-      <p>Scenarios</p>
-      <p>Ontology</p>
-      <p>Taxonomy</p>
-      <p>Chorography</p>
-    </div>
+				<div
+					id="iast"
+					class="skill-tools info-container scroll-element js-scroll fade-in-bottom">
+					<h2>IA Tools:</h2>
+					<p>Stakeholder analysis</p>
+					<p>Benchmarking</p>
+					<p>Free listing</p>
+					<p>Card sorting</p>
+					<p>Affinity diagrams</p>
+					<p>Personas</p>
+					<p>Scenarios</p>
+					<p>Ontology</p>
+					<p>Taxonomy</p>
+					<p>Chorography</p>
+				</div>
+			</section>
 
-  </section>
+			<section id="my-works" class="scroll-container">
+				<hgroup class="section-title scroll-element js-scroll fade-in">
+					<!-- <h1>my recent works</h1> -->
+					<p>
+						Here are a few past design projects I've worked on. Want to see
+						more? <a href="mailto:alfiobiondo@icloud.com">Email me</a>.
+					</p>
+				</hgroup>
 
-  <section id="my-works" class="scroll-container">
+				<div class="card-container">
+					<figure class="card card-1 scroll-element js-scroll slide-left">
+						<img
+							src="./Resources/Images/Mens_Sana.png"
+							alt="Mens Sana case study logo"
+							class="card-image" />
+						<figcaption class="card-body">
+							<h2 class="card-title">mens sana</h2>
+							<p class="card-description">web app for psychological support</p>
+							<a
+								class="card-description"
+								href="https://www.behance.net/gallery/177190921/Mens-Sana-UXUI-Web-App"
+								>see case <i class="fa-solid fa-arrow-right"></i
+							></a>
+						</figcaption>
+					</figure>
 
-    <hgroup class="section-title scroll-element js-scroll fade-in">
-      <!-- <h1>my recent works</h1> -->
-      <p>Here are a few past design projects I've worked on. Want to see more? <a href="mailto:alfiobiondo@icloud.com">Email me</a>.</p>
-    </hgroup>
-    
-    <div class="card-container">
-      <figure class="card card-1 scroll-element js-scroll slide-left">
-        <img src="./Resources/Images/Mens_Sana.png" alt="Mens Sana case study logo" class="card-image">
-        <figcaption class="card-body">
-          <h2 class="card-title">mens sana</h2>
-          <p class="card-description">web app for psychological support</p>
-          <a class="card-description" href="https://www.behance.net/gallery/177190921/Mens-Sana-UXUI-Web-App">see case <i class="fa-solid fa-arrow-right"></i></a>
-        </figcaption>
-      </figure>
-      
-      <figure class="card card-2 scroll-element js-scroll slide-right">
-        <img src="./Resources/Images/Biocesta_del_Gusto.jpeg" alt="Biocesta del Gusto case study logo" class="card-image">
-        <figcaption class="card-body">
-          <h2 class="card-title">biocesta del gusto</h2>
-          <p class="card-description">web app for a local food grocery store</p>
-          <a class="card-description" href="https://www.behance.net/gallery/177146645/Biocesta-del-Gusto-UXUI-Web-App">see case <i class="fa-solid fa-arrow-right"></i></a>
-        </figcaption>
-      </figure>
-    </div>
-    
-  </section>
+					<figure class="card card-2 scroll-element js-scroll slide-right">
+						<img
+							src="./Resources/Images/Biocesta_del_Gusto.jpeg"
+							alt="Biocesta del Gusto case study logo"
+							class="card-image" />
+						<figcaption class="card-body">
+							<h2 class="card-title">biocesta del gusto</h2>
+							<p class="card-description">
+								web app for a local food grocery store
+							</p>
+							<a
+								class="card-description"
+								href="https://www.behance.net/gallery/177146645/Biocesta-del-Gusto-UXUI-Web-App"
+								>see case <i class="fa-solid fa-arrow-right"></i
+							></a>
+						</figcaption>
+					</figure>
+				</div>
+			</section>
 
-  <section id="get-in-touch" class="scroll-container">
-    <!-- <h1>get in touch</h1> -->
-    <p class="scroll-element js-scroll fade-in-bottom">If you've got any questions, feel free to contact me! If I don't reply right away, I might be off the grid for a bit. But don't worry, I'll get back to you as soon as I can. You can count on it!</p>
-    <button class="mail-button scroll-element js-scroll fade-in-bottom">Get in touch</button>
-  </section>
+			<section id="get-in-touch" class="scroll-container">
+				<!-- <h1>get in touch</h1> -->
+				<p class="scroll-element js-scroll fade-in-bottom">
+					If you've got any questions, feel free to contact me! If I don't reply
+					right away, I might be off the grid for a bit. But don't worry, I'll
+					get back to you as soon as I can. You can count on it!
+				</p>
+				<button class="mail-button scroll-element js-scroll fade-in-bottom">
+					Get in touch
+				</button>
+			</section>
+		</main>
 
- </main>
+		<footer>
+			<p>&copy; Copyright 2023, Alfio Biondo | All Right Reserved</p>
 
- <footer>
-
-  <p>&copy; Copyright 2023, Alfio Biondo | All Right Reserved</p>
-
-  <div class="social-media-icons">
-    <a href="https://www.linkedin.com/in/alfio-biondo">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/alfiobiondo">
-      <i class="fa-brands fa-github"></i>
-    </a>
-    <a href="https://www.twitter.com/alfiobiondo">
-      <i class="fa-brands fa-twitter"></i>
-    </a>
-    <a href="https://www.instagram.com/alfiobiondo">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-  </div>
-</footer>
- 
-</body>
+			<div class="social-media-icons">
+				<a href="https://www.linkedin.com/in/alfio-biondo">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+				<a href="https://github.com/alfiobiondo">
+					<i class="fa-brands fa-github"></i>
+				</a>
+				<a href="https://www.twitter.com/alfiobiondo">
+					<i class="fa-brands fa-twitter"></i>
+				</a>
+				<a href="https://www.instagram.com/alfiobiondo">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+			</div>
+		</footer>
+	</body>
 </html>
