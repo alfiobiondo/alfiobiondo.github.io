@@ -375,11 +375,15 @@ header {
 .card-container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-	gap: 20px; /* Adjust gap between cards */
+	gap: 1.5rem; /* Adjust gap between cards */
 }
 
 .card {
+	position: relative;
 	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
 	aspect-ratio: 16 / 9;
 	overflow: hidden;
 	background-color: rgb(40, 40, 40);
@@ -390,22 +394,6 @@ header {
 	border-radius: 1rem;
 	box-shadow: 7.5px 7.5px 5px rgba(40, 40, 40, 0.5);
 }
-
-/* .card-1 {
-	grid-area: card1;
-}
-
-.card-2 {
-	grid-area: card2;
-}
-
-.card-3 {
-	grid-area: card3;
-}
-
-.card-4 {
-	grid-area: card4;
-} */
 
 .card-image {
 	object-fit: contain;
@@ -422,7 +410,7 @@ header {
 }
 
 .card-body {
-	width: 46.5%;
+	width: 85%;
 	aspect-ratio: inherit;
 	position: absolute;
 	padding: 3.125rem;
@@ -595,7 +583,7 @@ footer a {
 	}
 
 	.card-body {
-		width: 47.5%;
+		width: 100%;
 	}
 }
 
@@ -710,14 +698,11 @@ footer a {
 	/* MY WORKS */
 
 	.card-body {
-		width: 90%;
+		width: 100%;
 	}
 
 	.card-container {
-		grid-template-columns: 1fr; /* One card per row on smaller screens */
-		/* flex-direction: row;
-    flex-wrap: wrap; */
-		/* gap: 1.5rem; */
+		grid-template-columns: 1fr;
 	}
 
 	/* GET IN TOUCH */
