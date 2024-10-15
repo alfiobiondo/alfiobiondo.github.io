@@ -374,7 +374,9 @@ header {
 
 .card-container {
 	display: grid;
-	grid-template: 'card1 card2 card3' auto / 1fr 1fr 1fr;
+	grid-template:
+		'card1 card2' auto / 1fr 1fr
+		'card3 card4' auto / 1fr 1fr;
 	gap: 1.5rem;
 }
 
@@ -401,6 +403,10 @@ header {
 
 .card-3 {
 	grid-area: card3;
+}
+
+.card-4 {
+	grid-area: card4;
 }
 
 .card-image {
@@ -714,7 +720,8 @@ footer a {
 		grid-template:
 			'card1' auto
 			'card2' auto
-			'card3' auto;
+			'card3' auto
+			'card4' auto;
 		/* flex-direction: row;
     flex-wrap: wrap; */
 		gap: 1.5rem;
