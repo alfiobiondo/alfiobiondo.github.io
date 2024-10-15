@@ -375,7 +375,7 @@ header {
 .card-container {
 	display: grid;
 	grid-template:
-		'card1 card2' auto / 1fr 1fr
+		'card1 card2' auto
 		'card3 card4' auto / 1fr 1fr;
 	gap: 1.5rem;
 }
